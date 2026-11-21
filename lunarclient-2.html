@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LunarClient</title>
+<style>
+:root{color-scheme:dark;--bg:#080b16;--panel:#11182a;--line:#293653;--muted:#9aa9c5;--accent:#a99dff}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:radial-gradient(ellipse at 50% 0%,#252652 0%,#0b1020 46%,var(--bg) 80%);color:#f4f5ff;padding:28px 18px 44px}
+main{width:min(1040px,100%);margin:auto}.top{display:flex;align-items:center;gap:13px;margin-bottom:34px}.logo{width:48px;height:48px;border-radius:16px;background:linear-gradient(145deg,#c2baff,#6555c9);display:grid;place-items:center;box-shadow:0 8px 30px #7767ff44}.logo svg{width:30px;height:30px}h1{font-size:1.5rem;letter-spacing:-.04em;margin:0}.sub{font-size:.78rem;color:#a9a6db;margin-top:3px}
+.hero{text-align:center;padding:30px 0 34px}.hero h2{font-size:clamp(2.4rem,7vw,4.2rem);letter-spacing:-.065em;margin:0}.hero p{color:#b6b2d8;margin:10px 0 24px}
+.searchbox{max-width:720px;margin:auto;background:#11182add;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 20px 70px #0006;text-align:left}label{display:block;color:var(--muted);font-size:.82rem;margin:0 0 9px}.search{display:flex;gap:10px}input{min-width:0;flex:1;background:#090f1e;border:1px solid #34415f;border-radius:12px;padding:15px;color:white;font-size:1rem;outline:none}input:focus{border-color:var(--accent);box-shadow:0 0 0 3px #9b8cff22}button{border:0;border-radius:12px;padding:0 20px;background:linear-gradient(135deg,#b5aaff,#7968e9);color:#090b18;font-weight:750;cursor:pointer}button:hover,.tile:hover{filter:brightness(1.12);transform:translateY(-2px)}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;margin:38px 2px 15px}.sectionhead h3{margin:0;font-size:1.25rem}.sectionhead span{font-size:.78rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.tile{display:block;text-decoration:none;color:inherit;background:linear-gradient(145deg,#151e34,#101728);border:1px solid var(--line);border-radius:17px;padding:18px;min-height:132px;transition:.18s}.tile .emoji{font-size:1.55rem}.tile h4{margin:12px 0 5px;font-size:1rem}.tile p{margin:0;color:var(--muted);font-size:.8rem;line-height:1.4}.tile small{display:block;color:#a99dff;font-size:.7rem;margin-top:10px;overflow-wrap:anywhere}
+.notice{margin-top:24px;color:#8794b2;font-size:.78rem;line-height:1.55;text-align:center}.domain{text-align:center;margin-top:26px;color:#65718d;font-size:.75rem;overflow-wrap:anywhere}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:460px){.grid{grid-template-columns:1fr}.search{flex-direction:column}button{padding:14px}}
+</style>
+</head>
+<body>
+<main>
+<header class="top">
+<div class="logo" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M31.8 5.5A18.5 18.5 0 1 0 42.5 31 15.5 15.5 0 0 1 31.8 5.5Z" fill="#11152D"/><path d="m36 5 1.8 5.2L43 12l-5.2 1.8L36 19l-1.8-5.2L29 12l5.2-1.8L36 5Z" fill="#fff"/><circle cx="13" cy="12" r="1.5" fill="white"/></svg></div>
+<div><h1>LunarClient</h1><div class="sub">Your corner of the internet</div></div>
+</header>
+<section class="hero">
+<h2>Explore beyond.</h2><p>Find something to play, watch, learn, or explore.</p>
+<div class="searchbox">
+<form id="go"><label for="address">Go to a website</label><div class="search"><input id="address" placeholder="Search or enter a website address" autocomplete="url" spellcheck="false"><button type="submit">Go ↗</button></div></form>
+</div>
+</section>
+<div class="sectionhead"><h3>Explore categories</h3><span>Pick a place to start</span></div>
+<div class="grid">
+<a class="tile" href="https://www.roblox.com/" target="_blank" rel="noopener"><div class="emoji">🎮</div><h4>Games</h4><p>Discover games and experiences.</p><small>Roblox ↗</small></a>
+<a class="tile" href="https://www.youtube.com/" target="_blank" rel="noopener"><div class="emoji">🎬</div><h4>Movies & videos</h4><p>Find videos, trailers, and entertainment.</p><small>YouTube ↗</small></a>
+<a class="tile" href="https://open.spotify.com/" target="_blank" rel="noopener"><div class="emoji">🎵</div><h4>Music</h4><p>Listen to music and discover artists.</p><small>Spotify ↗</small></a>
+<a class="tile" href="https://www.coolmathgames.com/" target="_blank" rel="noopener"><div class="emoji">🧩</div><h4>Puzzles</h4><p>Try brain games and logic challenges.</p><small>Coolmath Games ↗</small></a>
+<a class="tile" href="https://www.wikipedia.org/" target="_blank" rel="noopener"><div class="emoji">🌎</div><h4>Explore & learn</h4><p>Look up topics, places, and big questions.</p><small>Wikipedia ↗</small></a>
+<a class="tile" href="https://www.google.com/" target="_blank" rel="noopener"><div class="emoji">✨</div><h4>More</h4><p>Search the web for anything else.</p><small>Google ↗</small></a>
+</div>
+<p class="notice">LunarClient is a launch page with shortcuts to external websites. It is not an anonymizing proxy and does not bypass network filters, subscriptions, or website access controls.</p>
+<div class="domain">superhardgeographicquestions.andalsomathquestionsnothingtooseehere.com</div>
+</main>
+<script>
+document.getElementById('go').addEventListener('submit',function(e){e.preventDefault();let v=document.getElementById('address').value.trim();if(!v)return;if(!/^https?:\/\//i.test(v))v='https://'+v;try{let u=new URL(v);if(!['http:','https:'].includes(u.protocol))throw 0;location.href=u.href}catch{alert('Enter a valid website address.')}});
+</script>
+</body>
+</html>
